@@ -24,6 +24,9 @@
             r: SHIP_SIZE / 2,
             a: 90 / 180 * Math.PI, // convert to radians
         }
+        // set up event handlers
+        document.addEventListener("keydown", keyDown);
+        document.addEventListener("keyup", keyUp);
 
         // set up the game loop
         setInterval(update, 1000 / FPS);
@@ -55,6 +58,10 @@
             // rotate the ship
 
             // move the ship
+
+          // centre dot
+          ctx.fillStyle = "red";
+          ctx.fillRect(ship.x - 1, ship.y - 1, 3, 3);
 
         }
   </script>
